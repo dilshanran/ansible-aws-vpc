@@ -41,7 +41,7 @@
         key_name: vprofile-key
         region: "{{ region }}"
         instance_type: t2.micro
-        image_id: "{{ bastion_ami }}"  # Use 'image_id' instead of 'image'
+        ami: "{{ bastion_ami }}"  # Use 'image_id' instead of 'image'
         wait: yes
         wait_timeout: 300
         instance_tags:
@@ -56,4 +56,3 @@
         security_group_ids: "{{ BastionSG_out.group_id }}"
         subnet_id: "{{ pubsub1id }}"
       register: bastionHost_out
-
