@@ -41,7 +41,7 @@
         key_name: vprofile-key
         region: "{{ region }}"
         instance_type: t2.micro
-        ami: "{{ bastion_ami }}"  # Use 'image_id' instead of 'image'
+        image: "{{ bastion_ami }}"  # Use 'image_id' instead of 'image'
         wait: yes
         wait_timeout: 300
         instance_tags:
